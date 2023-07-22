@@ -21,3 +21,9 @@ button{
     font-size: 1rem;
     cursor: pointer;
 }
+.rem-books,.add-books{
+    margin: 2%;
+    width: 40%;
+    display: none;
+}
+.show{ display: block;}

@@ -10,3 +10,9 @@ toRem.addEventListener('click',() => update(remForm))
 function update(idname){
     idname.classList.add('show') //shows the form
 }
+
+function toggleTheme()
+{
+    var ele = document.body
+    ele.classList.toggle('light-mode')
+}

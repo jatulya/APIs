@@ -1,0 +1,33 @@
+body{
+    background-color: #933838;
+}
+h1{
+    color: #cd9d0c;
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: 'Lucida Sans';
+}
+.update{
+    display: flex;
+    flex-direction: column;
+}
+h3{
+    color: #f1d88e;
+}
+button{
+    background-color: #f0dada;
+    width: 120px;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.rem-books,.add-books{
+    margin: 2%;
+    width: 40%;
+    display: none;
+}
+.show{ display: block;}
+.update{
+    position: relative;
+    background-color: #cd9d0c;
+}

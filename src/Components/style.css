@@ -1,0 +1,32 @@
+body
+{
+    background-color: rgba(138, 33, 33, 0.825);
+    color: antiquewhite;
+}
+.head{
+    display: flex; /* they came in the same line */
+    flex-direction: column; /* came as column */
+    align-items: center; /* aligned to the center */ 
+   
+}
+h3{
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+h1{
+    margin-top: .5rem;
+    font-size: xx-large;
+    color: rgb(246, 203, 74);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ul{
+    margin-bottom:.5rem;
+    margin-top: .5rem;
+    display: grid ;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1em;
+    li{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    };
+   
+}

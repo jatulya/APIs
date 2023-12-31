@@ -2,3 +2,5 @@
 2. Created "Components" folder
 3. Inside Components, created "Main.js"
 4. Call it in App.js
+5. Create the front end
+6. useState is used for maintaining the search value

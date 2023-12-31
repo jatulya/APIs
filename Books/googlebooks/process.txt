@@ -1,1 +1,4 @@
-Created react App
+1. Created react App
+2. Created "Components" folder
+3. Inside Components, created "Main.js"
+4. Call it in App.js

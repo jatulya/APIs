@@ -14,6 +14,7 @@ const Main= () =>  {
                     <input type="text" placeholder="Enter the book name.."/>
                     <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
+                <img src='.\images\bg2.png' alt='Children reading books' />
             </div>
         </div>
       </>

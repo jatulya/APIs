@@ -1,12 +1,16 @@
 import react, { useState } from 'react'
 import Card from './Card'
 import axios from 'axios'
+import apikey from './keys'
 
 const Main= () =>  {
     const [search, setSearch] = useState("")
     
     const searchBook = () => {
         console.log(`Value of the book is: ${search}`)
+        axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apikey}`)
+        .then(res =>console.log(res)) //executed when the get req works (res => response)
+        .catch(err=>console.log(err)) //executed when error occurs (res and err are user defined variables)
     }
 
     return (

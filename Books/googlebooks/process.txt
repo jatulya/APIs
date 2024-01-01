@@ -4,3 +4,7 @@
 4. Call it in App.js
 5. Create the front end
 6. useState is used for maintaining the search value
+7. onChange event handler function to update the state with new search value
+8. We create a file where api key value is written. Write the name of the file in .gitignore, so this will 
+not be pushed to GitHub and can remain private.
+9. Export and import the value

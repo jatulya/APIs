@@ -5,11 +5,13 @@ import apikey from './keys'
 
 const Main= () =>  {
     const [search, setSearch] = useState("")
-    
+    const [bookData, setBookData] = useState([])
+
     const searchBook = () => {
         console.log(`Value of the book is: ${search}`)
         axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apikey}`)
-        .then(res =>console.log(res)) //executed when the get req works (res => response)
+        .then(res =>console.log(res.data.items)) //executed when the get req works (res => response)
+        //data, items are keys in the response we get from api: to find keys, check the documentation
         .catch(err=>console.log(err)) //executed when error occurs (res and err are user defined variables)
     }
 
@@ -39,12 +41,9 @@ const Main= () =>  {
         </div>
 
         <div className='container'>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
-            <Card/>
+            {
+               <Card book={bookData}/>
+            }
         </div>
       </>
     )

@@ -1,9 +1,11 @@
-import react from "react"
+import react, { useState } from "react"
 import Modal from "./Modal"
 
 const Card=({book})=>{
     console.log(book)
-
+    const [show, setShow] = useState(false)
+    const [bookItem, setItem] = useState()
+    
     return (
         <>
             {   //map is used to iterate over the array
@@ -28,7 +30,7 @@ const Card=({book})=>{
                     {
                         return (
                             <>
-                            <div className="card">
+                            <div className="card" onClick={() => {setShow(true); setItem(item)}}>
                                 <img src={thumbnail} alt="The Battle of the Labyrynth" />
                                 <div className="bottom">
                                         
@@ -41,7 +43,7 @@ const Card=({book})=>{
                                         }
                                     </div> 
                             </div>
-                            <Modal/>
+                            <Modal show={show} item={bookItem} />
                             </>
                         )
                     } 

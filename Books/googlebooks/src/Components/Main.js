@@ -10,7 +10,7 @@ const Main= () =>  {
     const searchBook = () => {
         console.log(`Value of the book is: ${search}`)
         axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${apikey}`)
-        .then(res =>console.log(res.data.items)) //executed when the get req works (res => response)
+        .then(res =>setBookData(res.data.items)) //executed when the get req works (res => response)
         //data, items are keys in the response we get from api: to find keys, check the documentation
         .catch(err=>console.log(err)) //executed when error occurs (res and err are user defined variables)
     }

@@ -1,12 +1,13 @@
 import react from "react"
 
-const Card=(book)=>{
+const Card=({book})=>{
     console.log(book)
 
     return (
         <>
             {   //map is used to iterate over the array
                 book.map((item) => {
+                    
                     return (
                         <>
                         <div className="card">

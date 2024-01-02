@@ -43,7 +43,7 @@ const Card=({book})=>{
                                         }
                                     </div> 
                             </div>
-                            <Modal show={show} item={bookItem} />
+                            <Modal show={show} item={bookItem} onClose={() => setShow(false)}/>
                             </>
                         )
                     } 

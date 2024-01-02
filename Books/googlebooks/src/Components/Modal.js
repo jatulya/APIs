@@ -1,6 +1,6 @@
 import react from 'react'
 
-const Modal = ({show, item}) => {
+const Modal = ({show, item, onClose}) => {
     if(!show)
     {
         return null;
@@ -10,7 +10,7 @@ const Modal = ({show, item}) => {
         <>
             <div className="overlay">
                 <div className="overlay-inner">
-                    <button className="close" ><i class="fas fa-times"></i></button>
+                    <button className="close" onClick={onClose}><i class="fas fa-times"></i></button>
                     <div className="inner-box">
                         <img src={thumbnail} alt="" />
                         <div className="info">

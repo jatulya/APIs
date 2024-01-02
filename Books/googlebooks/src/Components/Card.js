@@ -1,4 +1,5 @@
 import react from "react"
+import Modal from "./Modal"
 
 const Card=({book})=>{
     console.log(book)
@@ -28,18 +29,19 @@ const Card=({book})=>{
                         return (
                             <>
                             <div className="card">
-                            <img src={thumbnail} alt="The Battle of the Labyrynth" />
-                            <div className="bottom">
+                                <img src={thumbnail} alt="The Battle of the Labyrynth" />
+                                <div className="bottom">
+                                        
+                                        <h3 className="title">{title}</h3>
                                     
-                                    <h3 className="title">{title}</h3>
-                                   
-                                    { amount === 0 ?
-                                      (<p className="amount">FREE</p>) 
-                                      :
-                                      (<p className="amount">&#8377;{amount}</p>) 
-                                    }
-                                </div> 
+                                        { amount === 0 ?
+                                        (<p className="amount">FREE</p>) 
+                                        :
+                                        (<p className="amount">&#8377;{amount}</p>) 
+                                        }
+                                    </div> 
                             </div>
+                            <Modal/>
                             </>
                         )
                     } 

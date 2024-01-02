@@ -32,8 +32,9 @@ const Main= () =>  {
                     value={search} onChange={(e) => setSearch(e.target.value)} 
                     onKeyPress = {(e) => {
                         e.key === "Enter" && searchBook()
-                      }}/>
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                      }     
+                    }/>
+                    <button onClick = {searchBook}><i class="fa-solid fa-magnifying-glass" ></i></button>
                 </div>
                 
                 <img src='.\images\bg2.png' alt='Children reading books' />

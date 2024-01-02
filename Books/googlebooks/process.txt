@@ -8,3 +8,7 @@
 8. We create a file where api key value is written. Write the name of the file in .gitignore, so this will 
 not be pushed to GitHub and can remain private.
 9. Export and import the value
+10. call await functions and take the value from the api
+11. use it accordingly after reading the documentatioa
+12. Create Modal.js to display the book info when clicked
+

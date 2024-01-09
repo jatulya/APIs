@@ -1,12 +1,17 @@
 :root{
   --primary-blue: #D5E6F6;
   --secondary-blue:#9CACE6;
+  --blue3: #94ace6;
+  --ternary-blue: #2062ac;
+  --black: #000000;
   --white: #ffffff;
 }
 
 .App{
-  /*display:flex;
-  justify-content: center;*/
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
 }
@@ -14,7 +19,7 @@
 .title-section{
   background-color: var(--secondary-blue);
   width: 100%;
-  height : 40vh; /* vh -> viewport height -> the screen height visible to the user 
+  height : 300px; /* vh -> viewport height -> the screen height visible to the user 
                        -> here, the component height will be the 50% of visible height */
   display:flex;
   flex-direction: column;
@@ -30,4 +35,22 @@
   border: 1px solid var(--primary-blue);
   font-size: 18px;
   padding-left: 10px;
+  margin: 10px;
+}
+
+.title-section button{
+  cursor: pointer;
+  width: 200px;
+  color: var(--black);
+  background-color: var(--primary-blue);
+}
+.title-section button:hover{
+  cursor: pointer;
+  background-color: var(--ternary-blue);
+  color: var(--white);
+}
+
+.Display{
+  color: var(--black);
+  margin: 2px;
 }

@@ -5,13 +5,13 @@ export const Header: React.FC<HeaderProps> = ({
   title,
   variant = "primary",
 }) => {
-
+  const headerClass = `m-4 text-center text-dark`;
   return variant === "primary" ? (
-    <h1 className={`box m-4 text-5xl font-bold text-center text-dark`}>
+    <h1 className={`box text-5xl font-bold ${headerClass}`}>
       {title}
     </h1>
   ) : (
-    <h2 className={`box-sm m-4 text-3xl font-semibold text-center text-dark`}>
+    <h2 className={`box-sm text-3xl font-semibold ${headerClass}`}>
       {title}
     </h2>
   );

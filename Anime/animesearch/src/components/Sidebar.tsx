@@ -17,7 +17,7 @@ function Sidebar() {
 ];
   return (
     <aside className="w-84 ">
-      <Header variant="ternary" title="Top Anime" />
+      <Header variant="secondary" title="Top Anime" claassName="items-left-justify"/>
       <nav className="col-flex items-left-justify ml-8 mr-3">
         {links.map((link) => (
           <Hyperlink

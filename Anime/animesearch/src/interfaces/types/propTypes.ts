@@ -1,6 +1,7 @@
 export interface HeaderProps {
   title: string;
   variant?: "primary" | "secondary" | "ternary";
+  claassName?: string;
 }
 
 export interface HyperlinkProps {

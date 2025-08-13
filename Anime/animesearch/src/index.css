@@ -60,7 +60,7 @@
   }
   /* Centered flex container shortcut */
   .centered {
-    @apply  items-center justify-center;
+    @apply flex items-center justify-center;
   }
 
   /* Button with primary color */
@@ -81,7 +81,7 @@
   }
 
   .items-left-justify{
-    @apply items-start justify-start
+    @apply flex items-start justify-start
   }
 
   .items-right-justify{

@@ -42,9 +42,6 @@
   h3 {
     @apply text-2xl font-medium text-center mb-2;
   }
-  p, ul, ol {
-    @apply text-center;
-  }
 }
 
 /* Custom reusable component classes */
@@ -58,6 +55,9 @@
     @apply mx-auto my-2 p-4 rounded-md shadow bg-white;
   }
 
+  .box-s {
+    @apply mx-auto my-2 p-4 rounded-md shadow bg-white;
+  }
   /* Centered flex container shortcut */
   .centered {
     @apply flex items-center justify-center;
@@ -72,6 +72,22 @@
     @apply px-4 py-2 bg-secondary text-black font-semibold rounded-lg shadow hover:bg-pastel-violet-400 transition;
   }
 
+  .row-flex{
+    @apply flex flex-row 
+  }
+
+  .col-flex{
+    @apply flex flex-col 
+  }
+
+  .items-left-justify{
+    @apply flex items-start justify-start
+  }
+
+  .items-right-justify{
+    @apply items-end justify-start
+  }
+
   /* Background color helpers */
   .bg-primary {
     @apply bg-primary;
@@ -79,7 +95,6 @@
   .bg-secondary {
     @apply bg-secondary;
   }
-
   /* Reusable margin class for consistent spacing */
   .m-4 {
     @apply my-4 mx-auto;
@@ -88,5 +103,8 @@
   .text-dark {
     color: var(--color-black);
   }
-
+  /* General small box style for cards, links, or buttons */
+  .card-link {
+    @apply block text-center font-medium rounded-xl shadow-md hover:shadow-lg transition bg-white text-black hover:bg-pastel-blue-100 mt-3 w-full p-2;
+  }
 }

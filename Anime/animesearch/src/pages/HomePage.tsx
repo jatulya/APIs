@@ -1,5 +1,5 @@
-import Sidebar from "../components/Sidebar";
-import { Header } from "../ui/Header";
+import { AnimeListView, Sidebar } from "../components";
+import { Header } from "../ui";
 
 export const HomePage = () => {
   return (
@@ -8,7 +8,7 @@ export const HomePage = () => {
       <div className="flex min-h-screen ">
         <Sidebar />
         <div className="flex-1">
-          {/* Place your main content here */}
+          <AnimeListView />
         </div>
       </div>
     </div>

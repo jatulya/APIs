@@ -109,7 +109,27 @@
   }
 
   .search-input {
-  @apply w-full px-4 py-2 border-2 border-pastel-violet-400 rounded-l-xl outline-none focus:border-pastel-red-300 transition duration-200;
-  background-color: var(--color-pastel-violet-100);
-}
+    @apply w-full px-4 py-2 border-2 border-pastel-violet-400 rounded-l-xl outline-none focus:border-pastel-red-300 transition duration-200;
+    background-color: var(--color-pastel-violet-100); 
+  }
+
+  .anime-card {
+    @apply box flex flex-col items-center bg-white p-4 rounded-lg shadow-md transition hover:shadow-lg w-64;
+  }
+  
+  .anime-card img {
+    @apply rounded-md w-full h-64 object-cover mb-4;
+  }
+
+  .anime-card h3 {
+    @apply text-lg font-semibold text-center text-dark mt-2;
+  }
+
+  .anime-card a {
+    @apply block w-full no-underline;
+  }
+
+  .anime-card figure {
+    @apply w-full;
+  }
 }

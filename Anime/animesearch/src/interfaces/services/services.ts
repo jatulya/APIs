@@ -1,4 +1,4 @@
-import { getTopAnime } from "../api/repository";
+import { getAnimebyName, getTopAnime } from "../api/repository";
 import type { AnimeData } from "../types/data.types";
 
 export const fetchTopAnime = async (): Promise<AnimeData[]> => {
@@ -9,3 +9,12 @@ export const fetchTopAnime = async (): Promise<AnimeData[]> => {
     throw new Error(`Service error: ${(error as Error).message}`);
   }
 };
+
+export const searchAnime = async (query: string): Promise<AnimeData[]> => {
+  try {
+    const result = await getAnimebyName(query);
+    return result.data;
+  } catch (error) {
+    throw new Error(`Service error: ${(error as Error).message}`);
+  }
+}

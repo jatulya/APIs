@@ -1,8 +1,8 @@
-import type { HyperlinkProps } from "../interfaces/types/propTypes"
+import type { HyperlinkProps } from "../interfaces/types/prop.types";
 
-function Hyperlink({ title, href } : HyperlinkProps) {
+function Hyperlink({ title, href }: HyperlinkProps) {
   return (
-     <a
+    <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -10,7 +10,7 @@ function Hyperlink({ title, href } : HyperlinkProps) {
     >
       {title}
     </a>
-  )
+  );
 }
 
-export default Hyperlink
+export default Hyperlink;

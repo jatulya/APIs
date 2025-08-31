@@ -1,6 +1,6 @@
 import type { TopAnimeLink } from "../interfaces/types/objectTypes";
-import { Header } from "../ui/Header";
-import Hyperlink from "../ui/Hyperlink";
+import { Header, Hyperlink } from "../ui";
+
 
 function Sidebar() {
   const links: TopAnimeLink[] = [{

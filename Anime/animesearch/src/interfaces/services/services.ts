@@ -13,6 +13,7 @@ export const fetchTopAnime = async (): Promise<AnimeData[]> => {
 export const searchAnime = async (query: string): Promise<AnimeData[]> => {
   try {
     const result = await getAnimebyName(query);
+    console.log("result", result);
     return result.data;
   } catch (error) {
     throw new Error(`Service error: ${(error as Error).message}`);

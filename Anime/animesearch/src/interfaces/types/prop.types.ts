@@ -1,4 +1,5 @@
 import type { ChangeEvent, FormEvent } from "react";
+import type { AnimeData } from "./data.types";
 
 export interface HeaderProps {
   title: string;
@@ -17,3 +18,13 @@ export interface CustomSearchBarProps {
   onSubmit: (e: FormEvent<HTMLFormElement>) => void;
   placeholder?: string;
 }
+
+export interface AnimeCardProps {
+  anime: AnimeData;
+}
+
+export interface LoadingProps {
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+

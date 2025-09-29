@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 import { Header, Hyperlink } from "../ui";
 import type { AnimeData } from "../interfaces/types/data.types";
 import { fetchTopAnime } from "../interfaces/services/services";
+import CustomLoader from "../ui/CustomLoader";
+import type { LoadingProps } from "../interfaces/types/prop.types";
 
 
-function Sidebar() {
+function Sidebar({ setLoading }: LoadingProps) {
   const [animeList, setAnimeList] = useState<AnimeData[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -24,7 +25,6 @@ function Sidebar() {
       });
   }, []); // Empty dependency array = run only once on mount
 
-  if (loading) return <div>Loading...</div>;
   if (error)   return <div>Error: {error}</div>;
 
   return (

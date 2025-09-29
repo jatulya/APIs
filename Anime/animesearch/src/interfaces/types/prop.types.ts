@@ -23,3 +23,8 @@ export interface AnimeCardProps {
   anime: AnimeData;
 }
 
+export interface LoadingProps {
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+

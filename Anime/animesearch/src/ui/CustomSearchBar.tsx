@@ -21,7 +21,6 @@ export const CustomSearchBar: React.FC<CustomSearchBarProps> = ({
       disabled={!value.trim()}
       title="Click to search"
     >
-      {/* Search Icon (SVG) */}
       <svg
         className="w-5 h-5"
         fill="none"

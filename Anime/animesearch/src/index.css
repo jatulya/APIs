@@ -132,4 +132,9 @@
   .anime-card figure {
     @apply w-full;
   }
+
+  .search-input {
+  @apply w-full px-4 py-2 border-2 border-pastel-violet-400 rounded-l-xl outline-none focus:border-pastel-red-300 transition duration-200;
+  background-color: var(--color-pastel-violet-100);
+}
 }

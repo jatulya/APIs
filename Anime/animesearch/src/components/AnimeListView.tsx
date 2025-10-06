@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent } from "react";
-import { CustomLoader, CustomSearchBar } from "../ui";
+import { CustomSearchBar } from "../ui";
 import { searchAnime } from "../interfaces/services/services";
 import type { AnimeData } from "../interfaces/types/data.types";
 import AnimeCard from "./AnimeCard";

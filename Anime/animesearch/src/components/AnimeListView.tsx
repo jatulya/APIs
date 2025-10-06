@@ -10,13 +10,11 @@ function AnimeListView({ setLoading }: LoadingProps) {
   const [animeList, setAnimeList] = useState<AnimeData[]>([]);
 
   const handleSearch = async (e: React.FormEvent) => {
-    console.log(query);
     e.preventDefault();
     setLoading(true); // Start loader
     const temp = await searchAnime(query);
     setAnimeList(temp);
     setLoading(false);
-    console.log(animeList);
   };
 
   return (

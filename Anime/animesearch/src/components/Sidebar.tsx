@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Header, Hyperlink } from "../ui";
 import type { AnimeData } from "../interfaces/types/data.types";
 import { fetchTopAnime } from "../interfaces/services/services";
-import CustomLoader from "../ui/CustomLoader";
 import type { LoadingProps } from "../interfaces/types/prop.types";
 
 

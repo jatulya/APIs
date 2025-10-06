@@ -27,4 +27,6 @@ export interface LoadingProps {
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-
+export type ErrorPageProps = {
+  statusCode: number;
+};

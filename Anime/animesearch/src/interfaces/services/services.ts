@@ -15,6 +15,7 @@ export const searchAnime = async (query: string): Promise<AnimeData[]> => {
     const result = await getAnimebyName(query);
     return result.data;
   } catch (error) {
+    // console.log(error);
     throw new Error(`Service error: ${(error as Error).message}`);
   }
-}
+};

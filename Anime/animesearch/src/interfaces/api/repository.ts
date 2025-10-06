@@ -17,13 +17,14 @@ export const getTopAnime = async (): Promise<AnimeResponse> => {
 
 export const getAnimebyName = async(query : string) : Promise<AnimeResponse> => {
   try {
-    const response = await fetch(`${API_URL}/anime?q=${query}&order_by=title&sort=asc&limit=10`);
+    const response = await fetch(`${API_URL}/anime?q=${query}&order_by=tile&sort=asc&limit=10`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data: AnimeResponse = await response.json();
     return data;
   } catch (error) {
+    console.log(error);
     throw new Error(`Failed to fetch top anime: ${(error as Error).message}`);
   }
 }

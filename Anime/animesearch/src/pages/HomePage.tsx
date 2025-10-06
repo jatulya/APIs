@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimeListView, Sidebar } from "../components";
-import { CustomLoader, Header } from "../ui";
+import { CustomLoader, Header } from "../common/ui";
 
 export const HomePage = () => {
   const [loading, setLoading] = useState<boolean>(false);

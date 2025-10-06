@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent } from "react";
-import { CustomLoader, CustomSearchBar } from "../ui";
+import { CustomSearchBar } from "../ui";
 import { searchAnime } from "../interfaces/services/services";
 import type { AnimeData } from "../interfaces/types/data.types";
 import AnimeCard from "./AnimeCard";
@@ -10,13 +10,11 @@ function AnimeListView({ setLoading }: LoadingProps) {
   const [animeList, setAnimeList] = useState<AnimeData[]>([]);
 
   const handleSearch = async (e: React.FormEvent) => {
-    console.log(query);
     e.preventDefault();
     setLoading(true); // Start loader
     const temp = await searchAnime(query);
     setAnimeList(temp);
     setLoading(false);
-    console.log(animeList);
   };
 
   return (

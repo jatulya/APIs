@@ -23,8 +23,11 @@ export interface AnimeCardProps {
   anime: AnimeData;
 }
 
-export interface LoadingProps {
+export interface SubPageProps {
   setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  setError: React.Dispatch<React.SetStateAction<number | null>>;
+}
+
+export type ErrorPageProps = {
+  statusCode: number;
 };
-
-

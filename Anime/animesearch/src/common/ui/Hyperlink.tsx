@@ -1,4 +1,4 @@
-import type { HyperlinkProps } from "../interfaces/types/prop.types";
+import type { HyperlinkProps } from "../../interfaces/types/prop.types";
 
 function Hyperlink({ title, href }: HyperlinkProps) {
   return (

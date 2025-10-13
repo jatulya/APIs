@@ -1,4 +1,4 @@
-import type { CustomSearchBarProps } from "../interfaces/types/prop.types";
+import type { CustomSearchBarProps } from "../../interfaces/types/prop.types";
 
 export const CustomSearchBar: React.FC<CustomSearchBarProps> = ({
   value,

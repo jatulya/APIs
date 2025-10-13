@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import { Header, Hyperlink } from "../common/ui";
 import type { AnimeData } from "../interfaces/types/data.types";
 import { fetchTopAnime } from "../interfaces/services/services";
-import type { LoadingProps } from "../interfaces/types/prop.types";
+import type { SubPageProps } from "../interfaces/types/prop.types";
 
-function Sidebar({ setLoading }: LoadingProps) {
+function Sidebar({ setLoading, setError }: SubPageProps) {
   const [animeList, setAnimeList] = useState<AnimeData[]>([]);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -18,12 +17,10 @@ function Sidebar({ setLoading }: LoadingProps) {
         setLoading(false);
       })
       .catch((err) => {
-        setError(err.message || "Failed to load top anime");
+        setError(err as number);
         setLoading(false);
       });
   }, []); // Empty dependency array = run only once on mount
-
-  if (error) return <div>Error: {error}</div>;
 
   return (
     <aside className="w-84 ">

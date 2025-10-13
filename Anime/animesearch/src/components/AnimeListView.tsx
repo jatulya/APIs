@@ -1,24 +1,24 @@
-import { useState, type ChangeEvent } from "react";
+import { useEffect, useState, type ChangeEvent } from "react";
 import { CustomSearchBar } from "../common/ui";
 import { searchAnime } from "../interfaces/services/services";
 import type { AnimeData } from "../interfaces/types/data.types";
 import AnimeCard from "./AnimeCard";
-import type { LoadingProps } from "../interfaces/types/prop.types";
+import type { SubPageProps } from "../interfaces/types/prop.types";
 
-function AnimeListView({ setLoading }: LoadingProps) {
+function AnimeListView({ setLoading, setError }: SubPageProps) {
   const [query, setQuery] = useState<string>("");
   const [animeList, setAnimeList] = useState<AnimeData[]>([]);
-  const [error, setError] = useState<string | null>(null); // [setError]
 
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
-    try{
-       setLoading(true); // Start loader
-    const temp = await searchAnime(query);
-    setAnimeList(temp);    setLoading(false);
-
-    }catch(error){
-      console.log(error)
+    try {
+      setLoading(true); // Start loader
+      const temp = await searchAnime(query);
+      setAnimeList(temp);
+      setLoading(false);
+    } catch (error) {
+      setError(error as number);
+      setLoading(false);
     }
   };
 

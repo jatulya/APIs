@@ -6,7 +6,7 @@ export const fetchTopAnime = async (): Promise<AnimeData[]> => {
     const result = await getTopAnime();
     return result.data.slice(0, 5);
   } catch (error) {
-    throw new Error(`Service error: ${(error as Error).message}`);
+    throw error;
   }
 };
 
@@ -15,7 +15,6 @@ export const searchAnime = async (query: string): Promise<AnimeData[]> => {
     const result = await getAnimebyName(query);
     return result.data;
   } catch (error) {
-    // console.log(error);
-    throw new Error(`Service error: ${(error as Error).message}`);
+    throw error;
   }
 };

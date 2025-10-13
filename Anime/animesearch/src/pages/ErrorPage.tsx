@@ -2,8 +2,10 @@ import { errorMessages } from "../common/utils/constants";
 import type { ErrorPageProps } from "../interfaces/types/prop.types";
 
 export default function ErrorPage({ statusCode }: ErrorPageProps) {
+  console.log(statusCode);
   const message =
     errorMessages[statusCode] || "An unexpected error has occurred.";
+  
 
   return (
     <div className="centered flex-col min-h-screen bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-500">

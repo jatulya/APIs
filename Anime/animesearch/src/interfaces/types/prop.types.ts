@@ -31,3 +31,8 @@ export interface SubPageProps {
 export type ErrorPageProps = {
   statusCode: number;
 };
+
+export interface GenreSelectProps extends SubPageProps {
+  setAnimeList: React.Dispatch<React.SetStateAction<AnimeData[]>>;
+}
+

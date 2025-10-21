@@ -1,4 +1,7 @@
-import { getAnimebyName, getTopAnime } from "../api/repository";
+import {
+  getAnimebyName,
+  getTopAnime,
+} from "../api/anime.repository";
 import type { AnimeData } from "../types/data.types";
 
 export const fetchTopAnime = async (): Promise<AnimeData[]> => {
@@ -18,3 +21,4 @@ export const searchAnime = async (query: string): Promise<AnimeData[]> => {
     throw error;
   }
 };
+

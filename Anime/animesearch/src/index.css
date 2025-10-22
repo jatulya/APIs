@@ -1,9 +1,37 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
+
+/* Define theme variables for custom colors */
+@theme {
+  --color-primary: #c8b6ff;
+  --color-secondary: #ffd6ff;
+  --color-ash: #eae4e9;
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --color-pastel-blue-100: #c0fdff;
+  --color-pastel-blue-200: #c8e7ff;
+  --color-pastel-blue-300: #d0d1ff;
+  --color-pastel-blue-400: #bbd0ff;
+  --color-pastel-blue-500: #9381ff;
+
+  --color-pastel-red-100: #ffc2d1;
+  --color-pastel-red-200: #ffb3c6;
+  --color-pastel-red-300: #ff8fab;
+  --color-pastel-red-400: #fb6f92;
+
+  --color-pastel-violet-100: #f3c4fb;
+  --color-pastel-violet-200: #ecbcfd;
+  --color-pastel-violet-300: #e5b3fe;
+  --color-pastel-violet-400: #e2afff;
+  --color-pastel-violet-500: #deaaff;
+}
+
 /* Base styles for headings, centering, and backgrounds */
 @layer base {
   body {
-    @apply bg-primary text-black;
+    @apply bg-primary;
   }
   h1 {
     @apply text-5xl font-bold text-center mb-4;
@@ -14,22 +42,22 @@
   h3 {
     @apply text-2xl font-medium text-center mb-2;
   }
-  p, ul, ol {
-    @apply text-center;
-  }
 }
 
 /* Custom reusable component classes */
 @layer components {
   /* Centered box with rounded corners and shadow */
   .box {
-    @apply mx-auto my-4 p-6 rounded-lg shadow-md bg-white;
+    @apply mx-auto my-4 p-6 rounded-lg shadow-md bg-purple-200;
   }
   /* Slightly smaller content box */
   .box-sm {
     @apply mx-auto my-2 p-4 rounded-md shadow bg-white;
   }
 
+  .box-s {
+    @apply mx-auto my-2 p-4 rounded-md shadow bg-white;
+  }
   /* Centered flex container shortcut */
   .centered {
     @apply flex items-center justify-center;
@@ -44,6 +72,22 @@
     @apply px-4 py-2 bg-secondary text-black font-semibold rounded-lg shadow hover:bg-pastel-violet-400 transition;
   }
 
+  .row-flex {
+    @apply flex flex-row;
+  }
+
+  .col-flex {
+    @apply flex flex-col;
+  }
+
+  .items-left-justify {
+    @apply flex items-start justify-start;
+  }
+
+  .items-right-justify {
+    @apply items-end justify-start;
+  }
+
   /* Background color helpers */
   .bg-primary {
     @apply bg-primary;
@@ -51,4 +95,46 @@
   .bg-secondary {
     @apply bg-secondary;
   }
+  /* Reusable margin class for consistent spacing */
+  .m-4 {
+    @apply my-4 mx-auto;
+  }
+  /* Text color for headings (dark for good contrast) */
+  .text-dark {
+    color: var(--color-black);
+  }
+  /* General small box style for cards, links, or buttons */
+  .card-link {
+    @apply block  font-medium rounded-xl shadow-md hover:shadow-lg transition bg-white text-pastel-violet-500 hover:bg-pastel-blue-100 mt-3 w-full p-2;
+  }
+
+  .search-input {
+    @apply w-full px-4 py-2 border-2 border-pastel-violet-400 rounded-l-xl outline-none focus:border-pastel-red-300 transition duration-200;
+    background-color: var(--color-pastel-violet-100);
+  }
+
+  .anime-card {
+    @apply  items-center bg-white p-4 rounded-lg shadow-md transition hover:shadow-lg w-64;
+  }
+
+  .anime-card img {
+    @apply rounded-md w-full h-64 object-cover mb-4;
+  }
+
+  .anime-card h3 {
+    @apply text-lg font-semibold text-center mt-2;
+  }
+
+  .anime-card a {
+    @apply block w-full no-underline;
+  }
+
+  .anime-card figure {
+    @apply w-full;
+  }
+
+  .search-input {
+  @apply w-full px-4 py-2 border-2 border-pastel-violet-400 rounded-l-xl outline-none focus:border-pastel-red-300 transition duration-200;
+  background-color: var(--color-pastel-violet-100);
+}
 }
